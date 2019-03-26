@@ -1,5 +1,9 @@
 ﻿using System;
+
+//using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace Funkcja_Kwadratowa
 {
@@ -35,7 +39,7 @@ namespace Funkcja_Kwadratowa
             WyczyscDane();
         }
 
-        private void zamknijProgramToolStripMenuItem_Click(object sender, EventArgs e)
+        private void zamknijProgramToolStripMenuItem2_Click(object sender, EventArgs e)
         {
             Close();
         }
@@ -114,6 +118,41 @@ namespace Funkcja_Kwadratowa
         private void zamknijProgramToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void zapiszDaneToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Zapisz();
+        }
+
+        private void wczytajDaneToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Wczytaj();
+        }
+
+        private void zapiszDaneToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Zapisz();
+        }
+
+        private void wczytajDaneToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Wczytaj();
+        }
+
+        private void btZapiszWykres_Click(object sender, EventArgs e)
+        {
+            ZapiszWykres();
+        }
+
+        private void zapiszWykresToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            ZapiszWykres();
+        }
+
+        private void zapiszWykresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ZapiszWykres();
         }
 
         private void RownanieKwadratowe()
@@ -269,6 +308,122 @@ namespace Funkcja_Kwadratowa
             colorDialog1.ShowDialog();
             wykresfunkcji.ChartAreas[0].BackColor = colorDialog1.Color;
             btKolortla.BackColor = colorDialog1.Color;
+        }
+
+        private void btZapisz_Click(object sender, EventArgs e)
+        {
+            Zapisz();
+        }
+
+        private void btWczytaj_Click(object sender, EventArgs e)
+        {
+            Wczytaj();
+        }
+
+        private void Zapisz()
+        {
+            if (String.IsNullOrEmpty(txBA.Text) || String.IsNullOrEmpty(txBB.Text) || String.IsNullOrEmpty(txBC.Text))
+            {
+                MessageBox.Show("Dane nie mogą być puste!!!", "Informacja", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            else
+            {
+                //ZapiszsaveFileDialog.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+                //ZapiszsaveFileDialog.FilterIndex = 1;
+                //ZapiszsaveFileDialog.RestoreDirectory = true;
+                if (ZapiszsaveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    // File.WriteAllText(ZapiszsaveFileDialog.FileName, txBA.Text + txBB.Text + txBC.Text); // tez możliwy sposob zapisu
+                    StreamWriter p = new StreamWriter(ZapiszsaveFileDialog.FileName);
+                    try
+                    {
+                        p.Write(Double.Parse(txBA.Text) + " ");
+                        p.Write(Double.Parse(txBB.Text) + " ");
+                        p.Write(Double.Parse(txBC.Text));
+                        p.Close();
+                        MessageBox.Show("Plik został zapisany!!!", "Informacja", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Nie moga być litery znaki lub inne nie dozwolone znaki!!!", "Informacja", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    return;
+                }
+            }
+        }
+
+        private void Wczytaj()
+        {
+            if (WczytajopenFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    string odczyt;
+                    StreamReader o = new StreamReader(WczytajopenFileDialog.FileName);
+                    odczyt = o.ReadLine();
+                    String[] dane = odczyt.Split(' ');
+
+                    txBA.Text = dane[0];
+                    txBB.Text = dane[1];
+                    txBC.Text = dane[2];
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Niepoprawne dane lub plik wczytany plik z danymi!!!", "Ostrzeżenie", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
+                if (txBA.Text != "" && txBB.Text != "" && txBC.Text != "")
+                {
+                    RownanieKwadratowe();
+                }
+                else
+                {
+                    MessageBox.Show("Dane nie mogą być puste lub zły zapis danych w pliku!!!", "Informacja", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else
+            {
+                return;
+            }
+        }
+
+        private void ZapiszWykres()
+        {
+            if (String.IsNullOrEmpty(txBA.Text) || String.IsNullOrEmpty(txBB.Text) || String.IsNullOrEmpty(txBC.Text) || String.IsNullOrEmpty(labelDelta.Text))
+            {
+                MessageBox.Show("Wykres nie może być pusty!!!", "Informacja", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            else
+            {
+                if (ZapiszWykresFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        //Bitmap bitmapa = new Bitmap(wykresfunkcji.Width, wykresfunkcji.Height);
+                        //Rectangle wykres = new Rectangle(0, 0, wykresfunkcji.Width, wykresfunkcji.Height);
+                        //wykresfunkcji.DrawToBitmap(bitmapa, wykres);
+                        // bitmapa.Save(ZapiszWykresFileDialog.FileName); //bitmapa jest nie potrzebna zo zapisu bo wykresy obsługują metode SaveImage
+
+                        wykresfunkcji.SaveImage(ZapiszWykresFileDialog.FileName, ChartImageFormat.Bmp);
+                        wykresfunkcji.SaveImage(ZapiszWykresFileDialog.FileName, ChartImageFormat.Png);
+                        wykresfunkcji.SaveImage(ZapiszWykresFileDialog.FileName, ChartImageFormat.Jpeg);
+                        wykresfunkcji.SaveImage(ZapiszWykresFileDialog.FileName, ChartImageFormat.Gif);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Zapisanie wykresu się niepowiodło!!!", "Ostrzeżenie", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                else
+                {
+                    return;
+                }
+            }
         }
     }
 }

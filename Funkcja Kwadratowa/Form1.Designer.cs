@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.wykresfunkcji = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.txBA = new System.Windows.Forms.TextBox();
@@ -51,18 +51,23 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btWyczysc = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.plikToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.zapiszDaneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.wczytajDaneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripSeparator();
+            this.zamknijProgramToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.plikToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.obliczToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             this.wyczyscToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.wyczyćObliczeniaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
-            this.zamknijProgramToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.operacjeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.wyczyśćWykresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
             this.kolorWykresuToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.kolorTłaWykresuToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripSeparator();
+            this.zapiszWykresToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.oProgramieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btWyczyscwykres = new System.Windows.Forms.Button();
             this.btWyczyscobliczenia = new System.Windows.Forms.Button();
@@ -75,47 +80,59 @@
             this.wyczyśćDaneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.wyczyścDaneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.wyczyśćWykresToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.zapiszWykresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripSeparator();
             this.kolorTłaWykresuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kolorWykresuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripSeparator();
+            this.zapiszDaneToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.wczytajDaneToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.zamknijProgramToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.WczytajopenFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.ZapiszsaveFileDialog = new System.Windows.Forms.SaveFileDialog();
+            this.btZapisz = new System.Windows.Forms.Button();
+            this.btWczytaj = new System.Windows.Forms.Button();
+            this.btZapiszWykres = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.ZapiszWykresFileDialog = new System.Windows.Forms.SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.wykresfunkcji)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.MenuKontektowe.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // wykresfunkcji
             // 
             this.wykresfunkcji.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             this.wykresfunkcji.BorderlineWidth = 4;
-            chartArea1.Name = "ChartArea1";
-            this.wykresfunkcji.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.wykresfunkcji.Legends.Add(legend1);
+            chartArea3.Name = "ChartArea1";
+            this.wykresfunkcji.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.wykresfunkcji.Legends.Add(legend3);
             this.wykresfunkcji.Location = new System.Drawing.Point(16, 24);
             this.wykresfunkcji.Margin = new System.Windows.Forms.Padding(2);
             this.wykresfunkcji.Name = "wykresfunkcji";
             this.wykresfunkcji.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry;
-            series1.BorderWidth = 2;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            series1.IsVisibleInLegend = false;
-            series1.IsXValueIndexed = true;
-            series1.Legend = "Legend1";
-            series1.MarkerBorderWidth = 2;
-            series1.MarkerSize = 10;
-            series1.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
-            series1.Name = "Wykres funkcji";
-            series1.ShadowColor = System.Drawing.Color.Purple;
-            series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
-            series1.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
-            this.wykresfunkcji.Series.Add(series1);
-            this.wykresfunkcji.Size = new System.Drawing.Size(450, 452);
-            this.wykresfunkcji.TabIndex = 10;
+            series3.BorderWidth = 2;
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            series3.IsVisibleInLegend = false;
+            series3.IsXValueIndexed = true;
+            series3.Legend = "Legend1";
+            series3.MarkerBorderWidth = 2;
+            series3.MarkerSize = 10;
+            series3.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+            series3.Name = "Wykres funkcji";
+            series3.ShadowColor = System.Drawing.Color.Purple;
+            series3.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
+            series3.YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Double;
+            this.wykresfunkcji.Series.Add(series3);
+            this.wykresfunkcji.Size = new System.Drawing.Size(573, 537);
+            this.wykresfunkcji.TabIndex = 13;
             this.wykresfunkcji.Text = "Wykres funkcji";
             // 
             // txBA
@@ -245,7 +262,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(280, 168);
+            this.groupBox1.Size = new System.Drawing.Size(303, 168);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Równanie kwadratowe wyniki:";
@@ -276,11 +293,11 @@
             // 
             this.groupBox2.Controls.Add(this.wykresfunkcji);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.groupBox2.Location = new System.Drawing.Point(321, 51);
+            this.groupBox2.Location = new System.Drawing.Point(332, 51);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(478, 493);
+            this.groupBox2.Size = new System.Drawing.Size(603, 576);
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Wykres funkcji:";
@@ -288,10 +305,10 @@
             // btWyczysc
             // 
             this.btWyczysc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btWyczysc.Location = new System.Drawing.Point(13, 414);
+            this.btWyczysc.Location = new System.Drawing.Point(8, 27);
             this.btWyczysc.Margin = new System.Windows.Forms.Padding(2);
             this.btWyczysc.Name = "btWyczysc";
-            this.btWyczysc.Size = new System.Drawing.Size(280, 28);
+            this.btWyczysc.Size = new System.Drawing.Size(283, 28);
             this.btWyczysc.TabIndex = 5;
             this.btWyczysc.Text = "Wyczyść dane";
             this.btWyczysc.UseVisualStyleBackColor = true;
@@ -301,15 +318,56 @@
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.plikToolStripMenuItem1,
             this.plikToolStripMenuItem,
             this.operacjeToolStripMenuItem,
             this.oProgramieToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(808, 24);
-            this.menuStrip1.TabIndex = 10;
+            this.menuStrip1.Size = new System.Drawing.Size(946, 24);
+            this.menuStrip1.TabIndex = 14;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // plikToolStripMenuItem1
+            // 
+            this.plikToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.zapiszDaneToolStripMenuItem,
+            this.wczytajDaneToolStripMenuItem,
+            this.toolStripMenuItem7,
+            this.zamknijProgramToolStripMenuItem2});
+            this.plikToolStripMenuItem1.Name = "plikToolStripMenuItem1";
+            this.plikToolStripMenuItem1.Size = new System.Drawing.Size(38, 20);
+            this.plikToolStripMenuItem1.Text = "Plik";
+            // 
+            // zapiszDaneToolStripMenuItem
+            // 
+            this.zapiszDaneToolStripMenuItem.Name = "zapiszDaneToolStripMenuItem";
+            this.zapiszDaneToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.zapiszDaneToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
+            this.zapiszDaneToolStripMenuItem.Text = "Zapisz dane";
+            this.zapiszDaneToolStripMenuItem.Click += new System.EventHandler(this.zapiszDaneToolStripMenuItem_Click);
+            // 
+            // wczytajDaneToolStripMenuItem
+            // 
+            this.wczytajDaneToolStripMenuItem.Name = "wczytajDaneToolStripMenuItem";
+            this.wczytajDaneToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
+            this.wczytajDaneToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
+            this.wczytajDaneToolStripMenuItem.Text = "Wczytaj dane";
+            this.wczytajDaneToolStripMenuItem.Click += new System.EventHandler(this.wczytajDaneToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem7
+            // 
+            this.toolStripMenuItem7.Name = "toolStripMenuItem7";
+            this.toolStripMenuItem7.Size = new System.Drawing.Size(217, 6);
+            // 
+            // zamknijProgramToolStripMenuItem2
+            // 
+            this.zamknijProgramToolStripMenuItem2.Name = "zamknijProgramToolStripMenuItem2";
+            this.zamknijProgramToolStripMenuItem2.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.End)));
+            this.zamknijProgramToolStripMenuItem2.Size = new System.Drawing.Size(220, 22);
+            this.zamknijProgramToolStripMenuItem2.Text = "Zamknij program";
+            this.zamknijProgramToolStripMenuItem2.Click += new System.EventHandler(this.zamknijProgramToolStripMenuItem2_Click);
             // 
             // plikToolStripMenuItem
             // 
@@ -317,9 +375,7 @@
             this.obliczToolStripMenuItem,
             this.toolStripMenuItem2,
             this.wyczyscToolStripMenuItem,
-            this.wyczyćObliczeniaToolStripMenuItem,
-            this.toolStripMenuItem1,
-            this.zamknijProgramToolStripMenuItem});
+            this.wyczyćObliczeniaToolStripMenuItem});
             this.plikToolStripMenuItem.Name = "plikToolStripMenuItem";
             this.plikToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.plikToolStripMenuItem.Text = "Operacje";
@@ -327,21 +383,21 @@
             // obliczToolStripMenuItem
             // 
             this.obliczToolStripMenuItem.Name = "obliczToolStripMenuItem";
-            this.obliczToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.obliczToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
+            this.obliczToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
+            this.obliczToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
             this.obliczToolStripMenuItem.Text = "Oblicz";
             this.obliczToolStripMenuItem.Click += new System.EventHandler(this.obliczToolStripMenuItem_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(217, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(213, 6);
             // 
             // wyczyscToolStripMenuItem
             // 
             this.wyczyscToolStripMenuItem.Name = "wyczyscToolStripMenuItem";
             this.wyczyscToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.W)));
-            this.wyczyscToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
+            this.wyczyscToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
             this.wyczyscToolStripMenuItem.Text = "Wyczyść";
             this.wyczyscToolStripMenuItem.Click += new System.EventHandler(this.wyczyśćToolStripMenuItem_Click);
             // 
@@ -349,22 +405,9 @@
             // 
             this.wyczyćObliczeniaToolStripMenuItem.Name = "wyczyćObliczeniaToolStripMenuItem";
             this.wyczyćObliczeniaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.W)));
-            this.wyczyćObliczeniaToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
+            this.wyczyćObliczeniaToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
             this.wyczyćObliczeniaToolStripMenuItem.Text = "Wyczyść obliczenia";
             this.wyczyćObliczeniaToolStripMenuItem.Click += new System.EventHandler(this.wyczyćObliczeniaToolStripMenuItem_Click);
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(217, 6);
-            // 
-            // zamknijProgramToolStripMenuItem
-            // 
-            this.zamknijProgramToolStripMenuItem.Name = "zamknijProgramToolStripMenuItem";
-            this.zamknijProgramToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.End)));
-            this.zamknijProgramToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
-            this.zamknijProgramToolStripMenuItem.Text = "Zamknij program";
-            this.zamknijProgramToolStripMenuItem.Click += new System.EventHandler(this.zamknijProgramToolStripMenuItem_Click);
             // 
             // operacjeToolStripMenuItem
             // 
@@ -372,7 +415,9 @@
             this.wyczyśćWykresToolStripMenuItem,
             this.toolStripMenuItem3,
             this.kolorWykresuToolStripMenuItem1,
-            this.kolorTłaWykresuToolStripMenuItem1});
+            this.kolorTłaWykresuToolStripMenuItem1,
+            this.toolStripMenuItem8,
+            this.zapiszWykresToolStripMenuItem1});
             this.operacjeToolStripMenuItem.Name = "operacjeToolStripMenuItem";
             this.operacjeToolStripMenuItem.Size = new System.Drawing.Size(112, 20);
             this.operacjeToolStripMenuItem.Text = "Operacje wykresu";
@@ -406,6 +451,19 @@
             this.kolorTłaWykresuToolStripMenuItem1.Text = "Kolor tła wykresu";
             this.kolorTłaWykresuToolStripMenuItem1.Click += new System.EventHandler(this.kolorTłaWykresuToolStripMenuItem1_Click);
             // 
+            // toolStripMenuItem8
+            // 
+            this.toolStripMenuItem8.Name = "toolStripMenuItem8";
+            this.toolStripMenuItem8.Size = new System.Drawing.Size(202, 6);
+            // 
+            // zapiszWykresToolStripMenuItem1
+            // 
+            this.zapiszWykresToolStripMenuItem1.Name = "zapiszWykresToolStripMenuItem1";
+            this.zapiszWykresToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.S)));
+            this.zapiszWykresToolStripMenuItem1.Size = new System.Drawing.Size(205, 22);
+            this.zapiszWykresToolStripMenuItem1.Text = "Zapisz wykres";
+            this.zapiszWykresToolStripMenuItem1.Click += new System.EventHandler(this.zapiszWykresToolStripMenuItem1_Click);
+            // 
             // oProgramieToolStripMenuItem
             // 
             this.oProgramieToolStripMenuItem.Name = "oProgramieToolStripMenuItem";
@@ -417,7 +475,7 @@
             // btWyczyscwykres
             // 
             this.btWyczyscwykres.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btWyczyscwykres.Location = new System.Drawing.Point(161, 459);
+            this.btWyczyscwykres.Location = new System.Drawing.Point(158, 72);
             this.btWyczyscwykres.Margin = new System.Windows.Forms.Padding(2);
             this.btWyczyscwykres.Name = "btWyczyscwykres";
             this.btWyczyscwykres.Size = new System.Drawing.Size(132, 28);
@@ -429,7 +487,7 @@
             // btWyczyscobliczenia
             // 
             this.btWyczyscobliczenia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btWyczyscobliczenia.Location = new System.Drawing.Point(13, 459);
+            this.btWyczyscobliczenia.Location = new System.Drawing.Point(10, 72);
             this.btWyczyscobliczenia.Margin = new System.Windows.Forms.Padding(2);
             this.btWyczyscobliczenia.Name = "btWyczyscobliczenia";
             this.btWyczyscobliczenia.Size = new System.Drawing.Size(132, 28);
@@ -441,7 +499,7 @@
             // btKolorwykresu
             // 
             this.btKolorwykresu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btKolorwykresu.Location = new System.Drawing.Point(161, 498);
+            this.btKolorwykresu.Location = new System.Drawing.Point(158, 104);
             this.btKolorwykresu.Margin = new System.Windows.Forms.Padding(2);
             this.btKolorwykresu.Name = "btKolorwykresu";
             this.btKolorwykresu.Size = new System.Drawing.Size(132, 28);
@@ -453,7 +511,7 @@
             // btKolortla
             // 
             this.btKolortla.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btKolortla.Location = new System.Drawing.Point(13, 498);
+            this.btKolortla.Location = new System.Drawing.Point(10, 104);
             this.btKolortla.Margin = new System.Windows.Forms.Padding(2);
             this.btKolortla.Name = "btKolortla";
             this.btKolortla.Size = new System.Drawing.Size(132, 28);
@@ -471,91 +529,194 @@
             this.wyczyśćDaneToolStripMenuItem,
             this.wyczyścDaneToolStripMenuItem,
             this.wyczyśćWykresToolStripMenuItem1,
+            this.zapiszWykresToolStripMenuItem,
             this.toolStripMenuItem5,
             this.kolorTłaWykresuToolStripMenuItem,
             this.kolorWykresuToolStripMenuItem,
             this.toolStripMenuItem6,
+            this.zapiszDaneToolStripMenuItem1,
+            this.wczytajDaneToolStripMenuItem1,
+            this.toolStripMenuItem1,
             this.zamknijProgramToolStripMenuItem1});
             this.MenuKontektowe.Name = "MenuKontektowe";
-            this.MenuKontektowe.Size = new System.Drawing.Size(177, 176);
+            this.MenuKontektowe.Size = new System.Drawing.Size(177, 248);
             this.MenuKontektowe.Text = "Menu";
             // 
             // obliczToolStripMenuItem1
             // 
             this.obliczToolStripMenuItem1.Name = "obliczToolStripMenuItem1";
-            this.obliczToolStripMenuItem1.Size = new System.Drawing.Size(176, 22);
+            this.obliczToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.obliczToolStripMenuItem1.Text = "Oblicz";
             this.obliczToolStripMenuItem1.Click += new System.EventHandler(this.obliczToolStripMenuItem1_Click);
             // 
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(173, 6);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(177, 6);
             // 
             // wyczyśćDaneToolStripMenuItem
             // 
             this.wyczyśćDaneToolStripMenuItem.Name = "wyczyśćDaneToolStripMenuItem";
-            this.wyczyśćDaneToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.wyczyśćDaneToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.wyczyśćDaneToolStripMenuItem.Text = "Wyczyść wszysko";
             this.wyczyśćDaneToolStripMenuItem.Click += new System.EventHandler(this.wyczyśćDaneToolStripMenuItem_Click);
             // 
             // wyczyścDaneToolStripMenuItem
             // 
             this.wyczyścDaneToolStripMenuItem.Name = "wyczyścDaneToolStripMenuItem";
-            this.wyczyścDaneToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.wyczyścDaneToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.wyczyścDaneToolStripMenuItem.Text = "Wyczyść dane";
             this.wyczyścDaneToolStripMenuItem.Click += new System.EventHandler(this.wyczyścDaneToolStripMenuItem_Click);
             // 
             // wyczyśćWykresToolStripMenuItem1
             // 
             this.wyczyśćWykresToolStripMenuItem1.Name = "wyczyśćWykresToolStripMenuItem1";
-            this.wyczyśćWykresToolStripMenuItem1.Size = new System.Drawing.Size(176, 22);
+            this.wyczyśćWykresToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.wyczyśćWykresToolStripMenuItem1.Text = "Wyczyść wykres";
             this.wyczyśćWykresToolStripMenuItem1.Click += new System.EventHandler(this.wyczyśćWykresToolStripMenuItem1_Click);
+            // 
+            // zapiszWykresToolStripMenuItem
+            // 
+            this.zapiszWykresToolStripMenuItem.Name = "zapiszWykresToolStripMenuItem";
+            this.zapiszWykresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.zapiszWykresToolStripMenuItem.Text = "Zapisz wykres";
+            this.zapiszWykresToolStripMenuItem.Click += new System.EventHandler(this.zapiszWykresToolStripMenuItem_Click);
             // 
             // toolStripMenuItem5
             // 
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(173, 6);
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(177, 6);
             // 
             // kolorTłaWykresuToolStripMenuItem
             // 
             this.kolorTłaWykresuToolStripMenuItem.Name = "kolorTłaWykresuToolStripMenuItem";
-            this.kolorTłaWykresuToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.kolorTłaWykresuToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.kolorTłaWykresuToolStripMenuItem.Text = "Kolor tła wykresu";
             this.kolorTłaWykresuToolStripMenuItem.Click += new System.EventHandler(this.kolorTłaWykresuToolStripMenuItem_Click);
             // 
             // kolorWykresuToolStripMenuItem
             // 
             this.kolorWykresuToolStripMenuItem.Name = "kolorWykresuToolStripMenuItem";
-            this.kolorWykresuToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.kolorWykresuToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.kolorWykresuToolStripMenuItem.Text = "Kolor wykresu";
             this.kolorWykresuToolStripMenuItem.Click += new System.EventHandler(this.kolorWykresuToolStripMenuItem_Click);
             // 
             // toolStripMenuItem6
             // 
             this.toolStripMenuItem6.Name = "toolStripMenuItem6";
-            this.toolStripMenuItem6.Size = new System.Drawing.Size(173, 6);
+            this.toolStripMenuItem6.Size = new System.Drawing.Size(177, 6);
+            // 
+            // zapiszDaneToolStripMenuItem1
+            // 
+            this.zapiszDaneToolStripMenuItem1.Name = "zapiszDaneToolStripMenuItem1";
+            this.zapiszDaneToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.zapiszDaneToolStripMenuItem1.Text = "Zapisz dane";
+            this.zapiszDaneToolStripMenuItem1.Click += new System.EventHandler(this.zapiszDaneToolStripMenuItem1_Click);
+            // 
+            // wczytajDaneToolStripMenuItem1
+            // 
+            this.wczytajDaneToolStripMenuItem1.Name = "wczytajDaneToolStripMenuItem1";
+            this.wczytajDaneToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.wczytajDaneToolStripMenuItem1.Text = "Wczytaj dane";
+            this.wczytajDaneToolStripMenuItem1.Click += new System.EventHandler(this.wczytajDaneToolStripMenuItem1_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(177, 6);
             // 
             // zamknijProgramToolStripMenuItem1
             // 
             this.zamknijProgramToolStripMenuItem1.Name = "zamknijProgramToolStripMenuItem1";
-            this.zamknijProgramToolStripMenuItem1.Size = new System.Drawing.Size(176, 22);
+            this.zamknijProgramToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.zamknijProgramToolStripMenuItem1.Text = "Zamknij program";
             this.zamknijProgramToolStripMenuItem1.Click += new System.EventHandler(this.zamknijProgramToolStripMenuItem1_Click);
+            // 
+            // WczytajopenFileDialog
+            // 
+            this.WczytajopenFileDialog.DefaultExt = "txt";
+            this.WczytajopenFileDialog.FileName = "openFileDialog1";
+            this.WczytajopenFileDialog.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+            this.WczytajopenFileDialog.RestoreDirectory = true;
+            this.WczytajopenFileDialog.Title = "Wczytaj Dane";
+            // 
+            // ZapiszsaveFileDialog
+            // 
+            this.ZapiszsaveFileDialog.DefaultExt = "txt";
+            this.ZapiszsaveFileDialog.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+            this.ZapiszsaveFileDialog.RestoreDirectory = true;
+            this.ZapiszsaveFileDialog.Title = "Zapisz dane";
+            // 
+            // btZapisz
+            // 
+            this.btZapisz.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btZapisz.Location = new System.Drawing.Point(11, 136);
+            this.btZapisz.Margin = new System.Windows.Forms.Padding(2);
+            this.btZapisz.Name = "btZapisz";
+            this.btZapisz.Size = new System.Drawing.Size(132, 28);
+            this.btZapisz.TabIndex = 10;
+            this.btZapisz.Text = "Zapisz dane";
+            this.btZapisz.UseVisualStyleBackColor = true;
+            this.btZapisz.Click += new System.EventHandler(this.btZapisz_Click);
+            // 
+            // btWczytaj
+            // 
+            this.btWczytaj.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btWczytaj.Location = new System.Drawing.Point(159, 136);
+            this.btWczytaj.Margin = new System.Windows.Forms.Padding(2);
+            this.btWczytaj.Name = "btWczytaj";
+            this.btWczytaj.Size = new System.Drawing.Size(132, 28);
+            this.btWczytaj.TabIndex = 11;
+            this.btWczytaj.Text = "Wczytaj dane";
+            this.btWczytaj.UseVisualStyleBackColor = true;
+            this.btWczytaj.Click += new System.EventHandler(this.btWczytaj_Click);
+            // 
+            // btZapiszWykres
+            // 
+            this.btZapiszWykres.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btZapiszWykres.Location = new System.Drawing.Point(8, 182);
+            this.btZapiszWykres.Margin = new System.Windows.Forms.Padding(2);
+            this.btZapiszWykres.Name = "btZapiszWykres";
+            this.btZapiszWykres.Size = new System.Drawing.Size(283, 28);
+            this.btZapiszWykres.TabIndex = 12;
+            this.btZapiszWykres.Text = "Zapisz wykres funkcji";
+            this.btZapiszWykres.UseVisualStyleBackColor = true;
+            this.btZapiszWykres.Click += new System.EventHandler(this.btZapiszWykres_Click);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.btWyczysc);
+            this.groupBox3.Controls.Add(this.btZapiszWykres);
+            this.groupBox3.Controls.Add(this.btWyczyscwykres);
+            this.groupBox3.Controls.Add(this.btWyczyscobliczenia);
+            this.groupBox3.Controls.Add(this.btZapisz);
+            this.groupBox3.Controls.Add(this.btKolorwykresu);
+            this.groupBox3.Controls.Add(this.btKolortla);
+            this.groupBox3.Controls.Add(this.btWczytaj);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.groupBox3.Location = new System.Drawing.Point(12, 402);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(304, 225);
+            this.groupBox3.TabIndex = 15;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Operacje:";
+            // 
+            // ZapiszWykresFileDialog
+            // 
+            this.ZapiszWykresFileDialog.DefaultExt = "png";
+            this.ZapiszWykresFileDialog.Filter = "BMP (*.bmp)|*.bmp|PNG (*.png)|*.png|JPG (*.jpg)|*.jpg|GIF (*.gif)|*.gif";
+            this.ZapiszWykresFileDialog.FilterIndex = 2;
+            this.ZapiszWykresFileDialog.RestoreDirectory = true;
+            this.ZapiszWykresFileDialog.Title = "Zapisz wykres";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(808, 554);
+            this.ClientSize = new System.Drawing.Size(946, 639);
             this.ContextMenuStrip = this.MenuKontektowe;
-            this.Controls.Add(this.btKolortla);
-            this.Controls.Add(this.btKolorwykresu);
-            this.Controls.Add(this.btWyczyscobliczenia);
-            this.Controls.Add(this.btWyczyscwykres);
-            this.Controls.Add(this.btWyczysc);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btOblicz);
             this.Controls.Add(this.groupBox1);
@@ -581,6 +742,7 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.MenuKontektowe.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -609,7 +771,6 @@
         private System.Windows.Forms.ToolStripMenuItem obliczToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem wyczyscToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem wyczyćObliczeniaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem zamknijProgramToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem oProgramieToolStripMenuItem;
         private System.Windows.Forms.Button btWyczyscwykres;
         private System.Windows.Forms.Button btWyczyscobliczenia;
@@ -630,11 +791,28 @@
         private System.Windows.Forms.ToolStripMenuItem zamknijProgramToolStripMenuItem1;
         private System.Windows.Forms.Label labelxy;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
-        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem3;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem4;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem5;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem6;
+        private System.Windows.Forms.OpenFileDialog WczytajopenFileDialog;
+        private System.Windows.Forms.SaveFileDialog ZapiszsaveFileDialog;
+        private System.Windows.Forms.Button btZapisz;
+        private System.Windows.Forms.Button btWczytaj;
+        private System.Windows.Forms.Button btZapiszWykres;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.ToolStripMenuItem plikToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem zapiszDaneToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem wczytajDaneToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem7;
+        private System.Windows.Forms.ToolStripMenuItem zamknijProgramToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem8;
+        private System.Windows.Forms.ToolStripMenuItem zapiszWykresToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem zapiszWykresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem zapiszDaneToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem wczytajDaneToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
+        private System.Windows.Forms.SaveFileDialog ZapiszWykresFileDialog;
     }
 }
 

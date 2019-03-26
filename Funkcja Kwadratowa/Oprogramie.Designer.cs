@@ -39,8 +39,8 @@
             // btOK
             // 
             this.btOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btOK.Location = new System.Drawing.Point(178, 290);
-            this.btOK.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btOK.Location = new System.Drawing.Point(178, 355);
+            this.btOK.Margin = new System.Windows.Forms.Padding(2);
             this.btOK.Name = "btOK";
             this.btOK.Size = new System.Drawing.Size(127, 36);
             this.btOK.TabIndex = 0;
@@ -65,7 +65,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.groupBox1.Location = new System.Drawing.Point(12, 54);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(470, 231);
+            this.groupBox1.Size = new System.Drawing.Size(470, 287);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             // 
@@ -74,7 +74,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(6, 22);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(459, 190);
+            this.label2.Size = new System.Drawing.Size(459, 247);
             this.label2.TabIndex = 0;
             this.label2.Text = resources.GetString("label2.Text");
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -84,12 +84,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(494, 337);
+            this.ClientSize = new System.Drawing.Size(494, 402);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btOK);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Oprogramie";

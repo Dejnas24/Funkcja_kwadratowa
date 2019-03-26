@@ -125,6 +125,9 @@ W oknie trzeba podać dane A, B i C, potem je obliczy i wypisze
 W tym programie jest możliwość czyszczenia danych, wykresu,
  zmiana koloru wykresu i tła, jest też możliwość używania skrótów
  klawiaturowych oraz używania menu kontestowego.
+W tym programie jest również możliwość zapisu danych
+i odczytu zapisanych danych oraz możliwość zapisu wykresu w formacie:
+ "*.png", "*.bmp","*.jpg" i "*.gif".
 
 Autor: Andrzej Dejnas Denek
 Data utworzenia: marzec 2019 r. </value>
